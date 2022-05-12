@@ -1,5 +1,9 @@
 # nn_midterm_hw
 ## 图像分类任务
+#### 训练
+python Train.py -net resnet18 -gpu -lr 0.1 -method cutout/cutmix/mixup/none
+#### 结果
+训练好的模型参数存入checkpoint文件夹下，tensorboard所画曲线存入runs文件夹下
 
 ## 目标检测任务
 ### Faster R-CNN
