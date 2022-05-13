@@ -14,3 +14,17 @@ python Train.py -net resnet18 -gpu -lr 0.1 -method cutout/cutmix/mixup/none
 #### 测试
 将训练好的模型参数rcnn_model_weights.pth添加至./save_weights，并运行predict.py
 ### YOLO V3
+#### 训练
+```bashrc
+$ cd checkpoint
+$ wget https://github.com/YunYang1994/tensorflow-yolov3/releases/download/v1.0/yolov3_coco.tar.gz
+$ tar -xvf yolov3_coco.tar.gz
+$ cd ..
+$ python convert_weight.py --train_from_coco
+$ python train.py
+```
+#### 测试
+将模型参数yolov3_test_loss=8.1763.ckpt-7添加至./checkpoint，并运行
+```
+$ python evaluate.py
+```
